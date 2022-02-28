@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@venomswap/sdk'
+import { ChainId, Token } from '@xxxSwap/sdk'
 import { Tokens, TOKENS } from '../src/'
 
 describe('Tokens', () => {

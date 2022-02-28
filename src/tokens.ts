@@ -1,6 +1,6 @@
 import DEFAULT_TOKEN_LIST from '@venomswap/default-token-list'
 import COMMUNITY_TOKEN_LIST from '@venomswap/community-token-list'
-import { ChainId, Token } from '@venomswap/sdk'
+import { ChainId, Token } from '@xxxSwap/sdk'
 
 export interface TokenListToken {
   chainId: number
@@ -109,4 +109,5 @@ export const TOKENS: { [chainId in ChainId]: Tokens } = {
   [ChainId.BSC_TESTNET]: new Tokens(ChainId.BSC_TESTNET),
   [ChainId.HARMONY_MAINNET]: new Tokens(ChainId.HARMONY_MAINNET),
   [ChainId.HARMONY_TESTNET]: new Tokens(ChainId.HARMONY_TESTNET),
+  [ChainId.LOCAL_7545]: new Tokens(ChainId.LOCAL_7545),
 }

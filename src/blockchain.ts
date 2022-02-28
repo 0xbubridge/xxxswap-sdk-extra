@@ -1,4 +1,4 @@
-import { ChainId, Currency, ETHER, HARMONY, BINANCE_COIN } from '@venomswap/sdk'
+import { ChainId, Currency, ETHER, HARMONY, BINANCE_COIN } from '@xxxSwap/sdk'
 import random from 'lodash.random'
 
 /**
@@ -7,7 +7,8 @@ import random from 'lodash.random'
 export enum Blockchain {
   ETHEREUM = 1,
   BINANCE_SMART_CHAIN = 2,
-  HARMONY = 3
+  HARMONY = 3,
+  LOCAL = 4
 }
 
 /**
@@ -48,6 +49,9 @@ export class BlockchainSettings {
         case 1666700000:
           this.blockchain = Blockchain.HARMONY
         break
+        case 1337:
+          this.blockchain = Blockchain.HARMONY
+        break
         default:
           this.blockchain = Blockchain.ETHEREUM
       }
@@ -85,6 +89,9 @@ export class BlockchainSettings {
           break
         case 1666700000:
           this.name = 'Harmony Testnet'
+          break
+        case 1337:
+          this.name = 'Local 7545'
           break
         default:
           this.name = 'Ethereum Mainnet'
@@ -135,6 +142,9 @@ export class BlockchainSettings {
           break
         case 1666700000:
           this.rpcURLs = ['https://api.s0.b.hmny.io/']
+          break
+        case 1337:
+          this.rpcURLs = ['HTTP://127.0.0.1:7545']
           break
         default:
           this.rpcURLs = this.rpcAPIKey && this.rpcAPIKey !== '' ? [`https://mainnet.infura.io/v3/${this.rpcAPIKey}`] : ['https://mainnet.infura.io/v3/']
@@ -235,4 +245,5 @@ export const BLOCKCHAIN_SETTINGS: { [chainId in ChainId]: BlockchainSettings } =
   [ChainId.BSC_TESTNET]: new BlockchainSettings(ChainId.BSC_TESTNET),
   [ChainId.HARMONY_MAINNET]: new BlockchainSettings(ChainId.HARMONY_MAINNET),
   [ChainId.HARMONY_TESTNET]: new BlockchainSettings(ChainId.HARMONY_TESTNET),
+  [ChainId.LOCAL_7545]: new BlockchainSettings(ChainId.LOCAL_7545),
 }
