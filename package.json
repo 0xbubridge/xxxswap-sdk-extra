@@ -1,7 +1,7 @@
 {
   "name": "@xxxswap/sdk-extra",
   "license": "MIT",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "🛠 A specific SDK/toolkit for building applications on top of VenomSwap.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
