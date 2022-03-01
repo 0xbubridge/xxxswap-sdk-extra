@@ -1,4 +1,4 @@
-import { ChainId, Currency, ETHER, HARMONY, BINANCE_COIN } from '@xxxSwap/sdk'
+import { ChainId, Currency, ETHER, HARMONY, BINANCE_COIN, TEST_COIN } from '@xxxSwap/sdk'
 import random from 'lodash.random'
 
 /**
@@ -50,7 +50,7 @@ export class BlockchainSettings {
           this.blockchain = Blockchain.HARMONY
         break
         case 1337:
-          this.blockchain = Blockchain.HARMONY
+          this.blockchain = Blockchain.LOCAL
         break
         default:
           this.blockchain = Blockchain.ETHEREUM
@@ -199,6 +199,9 @@ export class BlockchainSettings {
       case 1666600000:
       case 1666700000:
         this.currency = HARMONY
+        break
+      case 1337:
+        this.currency = TEST_COIN
         break
       default:
         this.currency = ETHER

@@ -1,6 +1,6 @@
 import DEFAULT_TOKEN_LIST from '@venomswap/default-token-list'
 import COMMUNITY_TOKEN_LIST from '@venomswap/community-token-list'
-import { ChainId, Token } from '@xxxSwap/sdk'
+import { ChainId, Token } from '@xxxswap/sdk'
 
 export interface TokenListToken {
   chainId: number
