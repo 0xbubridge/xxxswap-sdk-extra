@@ -144,7 +144,7 @@ export class BlockchainSettings {
           this.rpcURLs = ['https://api.s0.b.hmny.io/']
           break
         case 1337:
-          this.rpcURLs = ['HTTP://127.0.0.1:7545']
+          this.rpcURLs = ['http://127.0.0.1:7545']
           break
         default:
           this.rpcURLs = this.rpcAPIKey && this.rpcAPIKey !== '' ? [`https://mainnet.infura.io/v3/${this.rpcAPIKey}`] : ['https://mainnet.infura.io/v3/']
@@ -184,6 +184,9 @@ export class BlockchainSettings {
         case 1666700000:
           this.explorerURL = 'https://explorer.testnet.harmony.one/'
           break
+        case 1337:
+          this.explorerURL = 'https://explorer.testnet.harmony.one/'
+          break
         default:
           this.explorerURL = 'https://etherscan.io/'
       }
@@ -220,6 +223,9 @@ export class BlockchainSettings {
         case 1666600000:
         case 1666700000:
           this.blockTime = 2
+          break
+        case 1337:
+          this.blockTime = 4
           break
         default:
           this.blockTime = 13
